@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Secret Message</title>
+        <link rel="stylesheet" href="sofia.css">
+    </head>
+
+<body>
+
+<section id="passwordScreen" class="password-screen">
+    <div class="noise"></div>
+
+    <div class="password-card">
+        <div class="password-line"></div>
+
+        <h1>Secret Message</h1>
+
+        <p class="subtitle">for you</p>
+
+        <input
+            id="passwordInput"
+            class="password-input"
+            type="password"
+            placeholder="PASSWORD"
+            autocomplete="off"
+        >
+
+        <button class="unlock-button" onclick="checkPassword()">
+            Unlock Letter
+        </button>
+
+        <p id="errorMessage" class="error"></p>
+    </div>
+</section>
+
+
+
+<section id="envelopeScreen" class="envelope-screen hidden">
+
+    <div class="envelope-stage">
+
+        <div class="envelope-title">
+            A Letter For You
+        </div>
+
+        <div
+            id="envelopeWrapper"
+            class="envelope-wrapper"
+            onclick="openEnvelope()"
+        >
+
+            <div class="envelope-back"></div>
+
+            <div class="envelope-paper">
+                <span>For Nayah</span>
+            </div>
+
+            <div class="envelope-front"></div>
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-seal">Y</div>
+
+        </div>
+
+        <div class="envelope-hint">
+            Click the envelope
+        </div>
+
+        <div class="kirby-decoration" aria-label="Kirby illustration">
+            <svg viewBox="0 0 190 170" role="img">
+                <ellipse cx="65" cy="143" rx="38" ry="15" class="kirby-shadow"/>
+                <ellipse cx="74" cy="92" rx="57" ry="58" class="kirby-body"/>
+                <ellipse cx="37" cy="117" rx="24" ry="13" class="kirby-foot"/>
+                <ellipse cx="111" cy="124" rx="27" ry="14" class="kirby-foot"/>
+                <ellipse cx="55" cy="75" rx="9" ry="22" class="kirby-eye"/>
+                <ellipse cx="91" cy="75" rx="9" ry="22" class="kirby-eye"/>
+                <ellipse cx="57" cy="69" rx="3" ry="10" class="kirby-eye-shine"/>
+                <ellipse cx="93" cy="69" rx="3" ry="10" class="kirby-eye-shine"/>
+                <path d="M67 94 Q74 101 81 94" class="kirby-mouth"/>
+                <ellipse cx="36" cy="95" rx="13" ry="6" class="kirby-blush"/>
+                <ellipse cx="112" cy="95" rx="13" ry="6" class="kirby-blush"/>
+                <path d="M124 72 Q151 51 166 66 Q177 77 160 89 Q145 99 126 92Z" class="kirby-arm"/>
+                <path d="M22 69 Q4 48 16 34 Q28 23 43 43 Q51 55 41 70Z" class="kirby-arm"/>
+            </svg>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="letterScreen" class="letter-screen hidden">
+
+    <div class="letter-container">
+
+        <article class="letter-paper">
+
+            <div class="letter-top">
+                <span class="small">A letter from Yza</span>
+
+                <h1>Dear Nayah,</h1>
+
+                <div class="divider"></div>
+            </div>
+
+            <div class="letter-body">
+
+                <p>
+                    Thank you for being my friend. I know I probably don’t say it enough,
+                    but I really want you to know how much I appreciate having you in my life.
+                </p>
+
+                <p>
+                    Sometimes our friendship feels so normal that I forget to stop and think
+                    about how special it actually is. I appreciate every conversation we’ve had,
+                    every random topic we’ve talked about, every joke we’ve laughed at, every
+                    stupid thing we’ve done, and every moment we’ve spent together. Even the
+                    times when we were doing absolutely nothing somehow became memories worth keeping.
+                </p>
+
+                <p>
+                    I think those simple moments are some of the most meaningful ones. We might
+                    not realize it while they’re happening, but someday, I know we’ll look back
+                    and remember all the little things that made our friendship what it is.
+                </p>
+
+                <p>
+                    One thing I really love about our friendship is that we don’t always have to
+                    be serious. We can start with a normal conversation and somehow end up talking
+                    about the most random things ever. We can laugh at jokes that probably wouldn’t
+                    make sense to anyone else, and sometimes we understand each other without even
+                    having to explain anything.
+                </p>
+
+                <p>
+                    With you, I feel like I can just be myself. I don’t have to pretend to be
+                    perfect, mature, or serious all the time. Sometimes we can just be two idiots
+                    laughing over something completely stupid, and honestly, those are some of my
+                    favorite moments.
+                </p>
+
+                <p>
+                    Thank you for accepting me for who I am, including my weirdness, randomness,
+                    mood changes, overthinking, dramatic moments, endless stories, and all the
+                    times I probably talked way too much. I know I can be annoying sometimes,
+                    stubborn, or overly dramatic, but you still choose to be my friend, and that
+                    means more to me than I can explain.
+                </p>
+
+                <p>
+                    Thank you for listening when I need to rant, even when my stories are
+                    unnecessarily long. Thank you for letting me tell you random things, even
+                    when they probably don’t matter that much. Thank you for putting up with me
+                    during my difficult moments. Most importantly, thank you for making me feel
+                    comfortable enough to be myself without constantly worrying about being judged.
+                </p>
+
+                <p>
+                    I want you to know that you can always be yourself around me too. You don’t
+                    have to pretend that everything is okay when it isn’t. If you’re having a bad
+                    day, you can tell me. If you’re angry, sad, excited, confused, or just feeling
+                    strange for no reason, you can tell me. Even if you have a random story that
+                    you think nobody would care about, tell me anyway. I’ll listen.
+                </p>
+
+                <p>
+                    You don’t always need to have the perfect words. Sometimes you can simply tell
+                    me that you’re not okay, and that’s enough. You don’t have to explain everything
+                    right away. I’ll be here to listen whenever you’re ready.
+                </p>
+
+                <p>
+                    I’m really grateful for every memory we’ve made and every moment we’ve shared.
+                    I hope our friendship continues to grow, even as things around us change. There
+                    will probably be more random conversations, more stupid jokes, more arguments,
+                    more laughter, and more unforgettable moments, and I’m glad I get to experience
+                    them with you.
+                </p>
+
+                <p>
+                    Thank you for being you, Nayah. Thank you for being my friend. I may not always
+                    say it, but I truly appreciate you more than you know.
+                </p>
+
+                <p>
+                    I’m really lucky to have a friend like you.
+                </p>
+
+                <div class="signature">
+                    <small>Your friend,</small>
+                    Yza
+                </div>
+
+                <div class="footer-line"></div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<script>
+const correctPassword = "063026";
+
+function checkPassword(){
+
+    const input = document.getElementById("passwordInput");
+    const error = document.getElementById("errorMessage");
+
+    if(input.value === correctPassword){
+
+        document.getElementById("passwordScreen").classList.add("hidden");
+
+        document.getElementById("envelopeScreen").classList.remove("hidden");
+
+        error.textContent = "";
+
+    }else{
+
+        error.textContent = "That password is incorrect.";
+
+        input.value = "";
+
+        input.focus();
+
+    }
+}
+
+document.getElementById("passwordInput").addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+        checkPassword();
+    }
+
+});
+
+function openEnvelope(){
+
+    const wrapper = document.getElementById("envelopeWrapper");
+
+    if(wrapper.classList.contains("open")){
+        return;
+    }
+
+    wrapper.classList.add("open");
+
+    setTimeout(function(){
+
+        document.getElementById("envelopeScreen").classList.add("hidden");
+
+        document.getElementById("letterScreen").classList.remove("hidden");
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }, 400);
+}
+</script>
+
+</body>
+</html>
